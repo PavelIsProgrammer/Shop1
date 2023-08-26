@@ -1,0 +1,66 @@
+﻿<Window x:Class="shop.View.WorkWithCatalog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:shop.View"
+        mc:Ignorable="d"
+        Title="Работа с каталогом" Height="450" Width="800"  MinWidth="800" MinHeight="450">
+    <!--Общая схема-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <!--Заголовок окна-->
+        <Grid Grid.Row="0" Background="#292625">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Source="E:\CSharpProjects\ShopApp\ShopApp\Resources\logo.ico" Stretch="Fill"/>
+            <TextBlock Style="{StaticResource MY}" Grid.Column="1" Text="Работа с каталогом"/>
+            <Button x:Name="butMainMenu" Grid.Column="2"
+                    Style="{StaticResource FlatButtonStyle}"
+                    Margin="10" Content="Главное меню" Click="butMainMenu_Click"/>
+        </Grid>
+
+        <!--Центральная часть-->
+        <Grid Grid.Row="1" >
+            <Grid.Background>
+                <SolidColorBrush Color="#888888"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.5*"/>
+            </Grid.RowDefinitions>
+
+            <!--<Button x:Name="butCreateOrder" Content="Каталог" Grid.Row="4" HorizontalAlignment="Right" Margin="0,0,10,0" Style="{StaticResource MY1}" >
+                <Button.RenderTransform>
+                    <SkewTransform AngleX="10" />
+                </Button.RenderTransform>
+            </Button>-->
+
+        </Grid>
+        <Grid Grid.Row="2" Background="#292625">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Text="@ Петрашкевич П.С" Foreground="white"
+                       HorizontalAlignment="Left" VerticalAlignment="Center"
+                       FontFamily="Comic Sans MS" FontSize="12"
+                       Margin="10, 0, 0, 0"/>
+            <TextBlock Grid.Column="1" Text="@PS_73" Foreground="White"
+                       HorizontalAlignment="Right" VerticalAlignment="Center"
+                       FontFamily="Comic Sans MS" FontSize="12"
+                       Margin="0,0,10,0"/>
+        </Grid>
+    </Grid>
+</Window>
